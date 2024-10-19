@@ -1,0 +1,5 @@
+{
+    "files.autoSave": "afterDelay",
+    "editor.wordWrap": "on",
+    "liveServer.settings.port": 5503
+}
