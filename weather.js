@@ -1,8 +1,5 @@
-//weatther app
-//hi
 const weatherForm = document.querySelector(".weatherForm");
 const cityInput = document.querySelector(".cityInput");
-// const card = document.querySelector(".cardz");
 const apikey = "0e5a30d0fefc1a348dcfdd5ab1447df2";
 const newTemp = document.getElementById("temp");
 const newCity = document.getElementById("city")
@@ -12,9 +9,6 @@ const newFeel = document.getElementById("feel")
 const newhumdity = document.getElementById("humdity")
 const newSpeed = document.getElementById("speed")
 const newCloud = document.getElementById("clouds")
-
-
-
 
 weatherForm.addEventListener("submit", async (event) => {
   event.preventDefault();
@@ -62,22 +56,7 @@ function displayWeatherInfo(data) {
     wind: { speed }
   })
 
-//   card.textContent = "";
-//   card.style.display = "flex";
-
-//   const cityDisplay = document.createElement("h1");
-//   const tempDisplay = document.createElement("p");
-//   const humidityDisplay = document.createElement("p");
-//   const descDisplay = document.createElement("p");
-//   const WeatherEmoji = document.createElement("p");
-
   const weather = getWeatherInfo(id);
-
-//   cityDisplay.textContent = city;
-//   tempDisplay.textContent = `${(temp - 273.15).toFixed(1)}°C`;
-//   humidityDisplay.textContent = `Humidity: ${humidity}%`;
-//   descDisplay.textContent = description;
-//   WeatherEmoji.textContent = weather.emoji;
 
   newTemp.textContent = `${(temp - 273.15).toFixed(1)}°C`;
   newCity.textContent = city;
@@ -87,18 +66,6 @@ function displayWeatherInfo(data) {
   newhumdity.textContent = `${humidity}%`
   newSpeed.textContent = `${(speed*3.6).toFixed(1)} km\h`
   newCloud.src = weather.emoji
-
-//   cityDisplay.classList.add("cityDisplay");
-//   tempDisplay.classList.add("tempDisplay");
-//   humidityDisplay.classList.add("humidityDisplay");
-//   descDisplay.classList.add("descDisplay");
-//   WeatherEmoji.classList.add("weatherEmoji");
-
-//   card.appendChild(cityDisplay);
-//   card.appendChild(tempDisplay);
-//   card.appendChild(humidityDisplay);
-//   card.appendChild(descDisplay);
-//   card.appendChild(WeatherEmoji);
 }
 
 function getWeatherInfo(weatherId) {

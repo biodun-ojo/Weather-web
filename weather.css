@@ -19,7 +19,6 @@ body {
 .weatherForm .cityInput {
   font-weight: bold;
   border-radius: 10px;
-  width: 300px;
 }
 .weatherForm button[type=submit] {
   font-weight: bold;
