@@ -1,5 +1,5 @@
 body {
-    font-family: Helvetica, sans-serif;
+    font-family: "poppins",Helvetica, sans-serif;
     background-color: hsla(0, 0%, 73%, 0.418) !important;
     display: flex;
     flex-direction: column;
@@ -10,19 +10,19 @@ body {
     margin: 20px;
 
     .cityInput {
-        padding: 10px;
-        font-size: 2rem;
+        // padding: 10px;
+        // font-size: 2rem;
         font-weight: bold;
-        border: 2px solid hsl(0, 0%, 20%, 0.3);
+        // border: 2px solid #3333334d;
         border-radius: 10px;
         width: 300px;
     }
 
     button[type="submit"] {
-        padding: 10px 20px;
+        // padding: 10px 20px;
         font-weight: bold;
-        font-size: 2rem;
-        background-color: hsl(122, 39%, 50%);
+        // font-size: 2rem;
+        // background-color: hsl(122, 39%, 50%);
         color: white;
         border: none;
         border-radius: 5px;

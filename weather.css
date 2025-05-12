@@ -1,5 +1,5 @@
 body {
-  font-family: Helvetica, sans-serif;
+  font-family: "poppins", Helvetica, sans-serif;
   background-color: hsla(0, 0%, 73%, 0.418) !important;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -17,18 +17,12 @@ body {
   margin: 20px;
 }
 .weatherForm .cityInput {
-  padding: 10px;
-  font-size: 2rem;
   font-weight: bold;
-  border: 2px solid hsla(0, 0%, 20%, 0.3);
   border-radius: 10px;
   width: 300px;
 }
 .weatherForm button[type=submit] {
-  padding: 10px 20px;
   font-weight: bold;
-  font-size: 2rem;
-  background-color: hsl(122, 39%, 50%);
   color: white;
   border: none;
   border-radius: 5px;

@@ -13,19 +13,27 @@
     /> -->
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
 
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Outfit:wght@100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Rubik:ital,wght@0,300..900;1,300..900&family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&family=Winky+Sans:ital,wght@0,300..900;1,300..900&display=swap"
+      rel="stylesheet"
+    />
+
     <title>weather</title>
   </head>
 
   <body>
     <form class="weatherForm bg-white p-6 rounded-lg">
-      <div>
+      <div class="flex border border-[#3333334d] rounded-md">
+        <img src="assets/search.svg" alt="" class="mx-3">
         <input
           type="text"
-          class="cityInput bg-white border m-0!"
+          class="cityInput bg-white border-0 m-0! h-10 focus:outline-none"
           placeholder="Enter City"
         />
       </div>
-      <button type="submit">Get weather</button>
+      <button type="submit" class="my-2 h-10 px-5 bg-linear-to-r to-blue-200 from-orange-500 text-md">Get weather</button>
     </form>
 
     <!--  
@@ -42,19 +50,19 @@
     <div class="bg-white rounded-2xl overflow-hidden">
       <section class="p-6 bg-[#f5f5f5]">
         <div>
-          <p class="font-bold">Iwo</p>
+          <p class="font-bold" id="city">---</p>
           <p class="text-[#878787] mb-10">Today's weather</p>
         </div>
 
         <div class="flex items-center my-5">
-          <img src="assets/cloud.svg" alt="cloud" class="w-15 me-5" />
+          <img src="assets/cloud.svg" alt="cloud" class="w-15 me-5" id="clouds"/>
           <div>
-            <h3 class="text-5xl font-bold">27ºC</h3>
-            <p>cloudy</p>
+            <h3 class="text-5xl font-bold" id="temp">---ºC</h3>
+            <p id="desc">---</p>
           </div>
         </div>
 
-        <p>A bit cloudy, but still a beautiful day</p>
+        <p id="advice">----------</p>
       </section>
 
       <section class="p-6">
@@ -68,7 +76,7 @@
           </div>
           <div>
             <h6 class="text-[#878787]">Feels Like</h6>
-            <p>28ºC</p>
+            <p class="text-[#2e2e2e] font-medium" id="feel">--ºC</p>
           </div>
         </div>
 
@@ -80,7 +88,7 @@
           </div>
           <div>
             <h6 class="text-[#878787]">Humdity</h6>
-            <p>69%</p>
+            <p class="text-[#2e2e2e] font-medium" id="humdity">--%</p>
           </div>
         </div>
 
@@ -92,13 +100,13 @@
           </div>
           <div>
             <h6 class="text-[#878787]">Wind Speed</h6>
-            <p>22km/h</p>
+            <p class="text-[#2e2e2e] font-medium" id="speed">--km/h</p>
           </div>
         </div>
       </section>
     </div>
 
-    <section class="cardz" style="display: none"></section>
+    <!-- <section class="cardz" style="display: none"></section> -->
 
     <script src="weather.js"></script>
   </body>
