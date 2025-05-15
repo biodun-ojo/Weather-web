@@ -9,9 +9,12 @@ const newFeel = document.getElementById("feel")
 const newhumdity = document.getElementById("humdity")
 const newSpeed = document.getElementById("speed")
 const newCloud = document.getElementById("clouds")
+const error = document.getElementById("error")
+const loader = document.getElementById('loader')
 
 weatherForm.addEventListener("submit", async (event) => {
   event.preventDefault();
+  loader.style.display = 'block';
 
   const city = cityInput.value;
 
@@ -36,6 +39,8 @@ async function getWeatherData(city) {
 
   if (!response.ok) {
     throw new Error("could not fethc weather data");
+  } else {
+    loader.style.display = 'none';
   }
 
   return await response.json();
@@ -90,11 +95,12 @@ function getWeatherInfo(weatherId) {
 }
 
 function displayError(message) {
-  const errorDisplay = document.createElement("p");
-  errorDisplay.textContent = message;
-  errorDisplay.classList.add("errorDisplay");
+  loader.style.display = 'none'
+  error.textContent = message;
+  error.style.display = "block";
 
-  card.textContent = "";
-  card.style.display = "flex";
-  card.appendChild(errorDisplay);
+  setTimeout(() => {
+    console.log("This runs after 2 seconds");
+    error.style.display = "none";
+  }, 5000);
 }

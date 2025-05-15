@@ -24,7 +24,7 @@
   </head>
 
   <body>
-    <form class="weatherForm bg-white p-6 rounded-xl w-fit">
+    <form class="weatherForm bg-white p-6 rounded-xl w-fit md:flex md:flex-row items-center md:gap-5">
       <div class="flex border border-[#3333334d] rounded-md">
         <img src="assets/search.svg" alt="" class="mx-3">
         <input
@@ -36,11 +36,11 @@
       <button type="submit" class="my-2 h-10 px-5 bg-linear-to-r to-blue-200 from-orange-500 text-md">Get weather</button>
     </form>
 
-    <div class="bg-white rounded-2xl overflow-hidden max-w-80 m-5">
+    <div class="bg-white rounded-2xl overflow-hidden max-w-80 m-5 md:grid md:grid-flow-col md:max-w-[600px] md:grid-cols-2">
       <section class="p-6 bg-[#f5f5f5]">
         <div>
           <p class="font-bold" id="city">---</p>
-          <p class="text-[#878787] mb-10">Today's weather</p>
+          <p class="text-[#878787] mb-10 md:mb-15">Today's weather</p>
         </div>
 
         <div class="flex items-center my-5">
@@ -94,6 +94,10 @@
         </div>
       </section>
     </div>
+
+    <div class="absolute top-[50%] bg-red-500 p-5 rounded-lg text-white hidden" id="error"> hello</div>
+
+    <img src="assets/loader-circle.svg" alt="" class="absolute top-[50%] bg-gray-400 rounded-full p-4 animate-spin hidden" id="loader">
 
     <script src="weather.js"></script>
   </body>
